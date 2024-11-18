@@ -1,4 +1,5 @@
-﻿using Tyuiu.NovikovDS.SprintReview.Task4.V8.Lib;
+﻿using System.Threading.Channels;
+using Tyuiu.NovikovDS.SprintReview.Task4.V8.Lib;
 
 DataService ds = new();
 
@@ -16,10 +17,10 @@ Console.WriteLine("*************************************************************
 Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 Console.WriteLine("***************************************************************************");
 
-string str = "264795863157";
-int n = 3, m = 4;
+string str = "264795863157"; //Определение исходной строки
+int n = 3, m = 4; //Размерность матрицы
 
-Console.WriteLine("* Строка: 264795863157");
+Console.WriteLine("* Строка: " + str); //Вывод строки на экран
 
 Console.WriteLine("***************************************************************************");
 Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
@@ -28,14 +29,14 @@ Console.WriteLine("*************************************************************
 Console.WriteLine("Массив:");
 
 int[,] matrix = new int[n, m];
-int count = 0;
+int count = 0; //Номер символа в строке
 for (int i = 0; i < n; i++)
 {
     for (int j = 0; j < m; j++)
     {
-        matrix[i, j] = int.Parse(str[count].ToString());
+        matrix[i, j] = int.Parse(str[count].ToString()); //Перевод символа в строке в число и занесение его в матрицу
         count++;
-        if (j == m - 1) Console.WriteLine(matrix[i, j]);
+        if (j == m - 1) Console.WriteLine(matrix[i, j]); //Последний символ в строке, запятая не нужна
         else Console.Write(matrix[i, j] + ", ");
     }
 }

@@ -18,7 +18,7 @@ Console.WriteLine("*************************************************************
 Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 Console.WriteLine("***************************************************************************");
 
-string path = Path.Combine("C:", "DataSprint5", "InPutDataFileTask7V8.txt");
+string path = Path.Combine("C:", "DataSprint5", "InPutDataFileTask7V8.txt"); // Путь до исходного файла
 
 Console.WriteLine("* Путь файла: " + path);
 Console.WriteLine("* Начальная строка:\n* " + File.ReadAllText(path));
